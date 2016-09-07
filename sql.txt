@@ -1,0 +1,12 @@
+CREATE TABLE groups(
+_id INTEGER PRIMARY KEY AUTOINCREMENT,
+name VARCHAR,
+create_date INTEGER,
+thread_count INTEGER
+);
+
+CREATE TABLE thread_group(
+_id INTEGER PRIMARY KEY AUTOINCREMENT,
+group_id INTEGER REFERENCES groups(_id),
+thread_id INTEGER
+);
